@@ -2,7 +2,7 @@
     <div class="common-layout">
     <el-container>
       <el-header>
-        <h2>外卖管理平台</h2>
+        <h2>智慧物业管理系统</h2>
           <el-dropdown>
           <span class="el-dropdown-link">
             欢迎:{{username}}
@@ -21,25 +21,25 @@
               <el-menu default-active="dafaultActive" router>
               <el-menu-item index="/home">
                   <el-icon><Bicycle /></el-icon>
-                  <span>首页</span>
+                  <span>工作台</span>
                 </el-menu-item>
                 <el-sub-menu index="/shop">
                   <template #title>
                     <el-icon><Burger /></el-icon>
-                    <span>店铺管理</span>
+                    <span>资料管理</span>
                   </template>
-                    <el-menu-item index="/shop/setting">
-                      <el-icon><Apple /></el-icon>店铺设置</el-menu-item>
-                    <el-menu-item index="/shop/food">
-                      <el-icon><GobletSquare /></el-icon>菜品设置</el-menu-item>
+                    <el-menu-item index="/cell/Info">
+                      <el-icon><Apple /></el-icon>小区信息</el-menu-item>
+                    <el-menu-item index="/build/Man">
+                      <el-icon><GobletSquare /></el-icon>楼座管理</el-menu-item>
                 </el-sub-menu>
                 <el-sub-menu index="/order">
                   <template #title>
                     <el-icon><Sunny /></el-icon>
-                    <span>订单管理</span>
+                    <span>车行管理</span>
                   </template>
                     <el-menu-item index="/order/list">
-                      <el-icon><Moon /></el-icon>订单列表</el-menu-item>
+                      <el-icon><Moon /></el-icon>区域管理</el-menu-item>
                 </el-sub-menu>
               </el-menu>
                 </el-aside>
@@ -64,13 +64,14 @@ export default {
 </script>
 <style scoped>
   .el-header{
-    background: #f60;
+    background:#333;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:antiquewhite
   }
   .el-aside{
-    background: #f6c1d4;
+    background: #fff;
     height: calc(100vh);
   }
    .el-dropdown-link{
@@ -78,7 +79,7 @@ export default {
   align-items: center;
 } 
 .el-menu, .el-menu-item{
-  background: #f6c1d4;
+  background: #fff;
 }
 .avatar-uploader .el-upload {
   border: 1px dashed var(--el-border-color);
@@ -89,6 +90,6 @@ export default {
   transition: var(--el-transition-duration-fast);
 }
 .el-main{
-  background: #9ff;
+  background: #fff;
 }
 </style>
