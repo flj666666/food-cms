@@ -5,7 +5,7 @@
         <h2>智慧物业管理系统</h2>
           <el-dropdown>
           <span class="el-dropdown-link">
-            欢迎:{{username}}
+            欢迎:管理员
             <el-icon><ArrowDown /></el-icon>
           </span>
           <template #dropdown>
@@ -23,7 +23,7 @@
                   <el-icon><Bicycle /></el-icon>
                   <span>工作台</span>
                 </el-menu-item>
-                <el-sub-menu index="/shop">
+                <el-sub-menu index="/manager">
                   <template #title>
                     <el-icon><Burger /></el-icon>
                     <span>资料管理</span>
@@ -33,17 +33,38 @@
                     <el-menu-item index="/build/Man">
                       <el-icon><GobletSquare /></el-icon>楼座管理</el-menu-item>
                 </el-sub-menu>
-                <el-sub-menu index="/order">
+                <el-sub-menu index="/home">
                   <template #title>
                     <el-icon><Sunny /></el-icon>
                     <span>车行管理</span>
                   </template>
-                    <el-menu-item index="/order/list">
+                    <el-menu-item>
+                      <el-icon><Moon /></el-icon>区域管理</el-menu-item>
+                </el-sub-menu>
+                <el-sub-menu index="/build/Man">
+                  <template #title>
+                    <el-icon><Sunny /></el-icon>
+                    <span>物业服务</span>
+                  </template>
+                </el-sub-menu>
+                <el-sub-menu index="/cell/Info">
+                  <template #title>
+                    <el-icon><Sunny /></el-icon>
+                    <span>缴费管理</span>
+                  </template>
+                    <el-menu-item>
+                    <el-icon><Moon /></el-icon>账单管理</el-menu-item>
+                </el-sub-menu>
+                <el-sub-menu index="/">
+                  <template #title>
+                    <el-icon><Sunny /></el-icon>
+                    <span>设备管理</span>
+                  </template>
+                    <el-menu-item>
                       <el-icon><Moon /></el-icon>区域管理</el-menu-item>
                 </el-sub-menu>
               </el-menu>
                 </el-aside>
-
                 <el-main>
                   <el-breadcrumb separator="/">
                       <el-breadcrumb-item v-for="item in titles" :key="item">{{item}}</el-breadcrumb-item>
@@ -53,13 +74,29 @@
               </el-container>
             </el-container>
           </div>
-    <router-view></router-view>
 </template>
 
 <script>
 
 export default {
   name: 'IndexView',
+  computed:{
+      dafaultActive(){
+        return this.$route.path
+      },
+       titles(){
+        return this.$route.meta && this.$route.meta.titles || []
+       },
+      //  username(){
+      //    return this.$store.state.users.username
+      //  }
+     },
+     methods:{
+      handleClear(){
+          this.$store.commit('users/clearToken')
+          window.location.href='/login'
+      }
+     }
 }
 </script>
 <style scoped>
@@ -68,6 +105,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:antiquewhite
+  }
+  .el-header span{
     color:antiquewhite
   }
   .el-aside{
