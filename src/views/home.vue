@@ -1,16 +1,15 @@
 <template>
-    <div ref="surface"></div>
+    <div ref="surface" class="surface"></div>
 </template>
 
 <script setup>
 import { defineComponent, ref, onMounted } from 'vue';
 import * as echarts from 'echarts';
-const surface = ref('')
+const surface = ref()
 defineComponent({
     name: 'HomeView'
 });
 onMounted(() => {
-
     var myChart = echarts.init(surface.value);
     var option;
 
@@ -78,7 +77,7 @@ onMounted(() => {
 
 <style scoped>
 .surface {
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 400px;
 }
 </style>
