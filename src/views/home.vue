@@ -1,48 +1,50 @@
 <template>
-    <el-row :gutter="40">
-        <el-col :span="6">
-            <div class="box">
-                <el-avatar :icon="UserFilled" :size="80" />
-                <div>
-                    <h3>住户数量</h3>
-                    <h1>15100</h1>
+    <div class="all">
+        <el-row :gutter="40">
+            <el-col :span="6">
+                <div class="box">
+                    <el-avatar :icon="UserFilled" :size="80" />
+                    <div>
+                        <h3>住户数量</h3>
+                        <h1>15100</h1>
+                    </div>
                 </div>
-            </div>
-        </el-col>
-        <el-col :span="6">
-            <div class="box">
-                <el-avatar :icon="House" :size="80" />
-                <div>
-                    <h3>房屋总数量</h3>
-                    <h1>1900</h1>
+            </el-col>
+            <el-col :span="6">
+                <div class="box">
+                    <el-avatar :icon="House" :size="80" />
+                    <div>
+                        <h3>房屋总数量</h3>
+                        <h1>1900</h1>
+                    </div>
                 </div>
-            </div>
-        </el-col>
-        <el-col :span="6">
-            <div class="box">
-                <el-avatar :icon="Van" :size="80" />
-                <div>
-                    <h3>车位总数量</h3>
-                    <h1>1800</h1>
+            </el-col>
+            <el-col :span="6">
+                <div class="box">
+                    <el-avatar :icon="Van" :size="80" />
+                    <div>
+                        <h3>车位总数量</h3>
+                        <h1>1800</h1>
+                    </div>
                 </div>
-            </div>
-        </el-col>
-        <el-col :span="6">
-            <div class="box">
-                <el-avatar :icon="Tools" :size="80" />
-                <div>
-                    <h3>设备总数量</h3>
-                    <h1>1600</h1>
+            </el-col>
+            <el-col :span="6">
+                <div class="box">
+                    <el-avatar :icon="Tools" :size="80" />
+                    <div>
+                        <h3>设备总数量</h3>
+                        <h1>1600</h1>
+                    </div>
                 </div>
-            </div>
-        </el-col>
-    </el-row>
-    <div ref="surface" class="surface"></div>
-    <div ref="surface2" class="surface2"></div>
+            </el-col>
+        </el-row>
+        <div ref="surface" class="surface"></div>
+        <div ref="surface2" class="surface2"></div>
+    </div>
 </template>
 
 <script setup>
-import { UserFilled ,House, Van, Tools} from '@element-plus/icons-vue'
+import { UserFilled, House, Van, Tools } from '@element-plus/icons-vue'
 import { defineComponent, ref, computed, watchEffect } from 'vue';
 import * as echarts from 'echarts';
 const surface = ref()
@@ -159,42 +161,47 @@ watchEffect(() => {
 </script>
 
 <style scoped lang="scss">
-.surface {
-    float: left;
-    width: 60%;
-    height: 500px;
-}
-.surface2 {
-    float: right;
-    width: 40%;
-    height: 500px;
-}
+.all {
+    margin-top: 14px;
+    overflow-x: hidden;
+    .surface {
+        float: left;
+        width: 60%;
+        height: 500px;
+    }
 
-.box {
-    position: relative;
-    height: 100px;
-    text-align: center;
-    background-color: rgba(183, 183, 183, 0.584);
+    .surface2 {
+        float: right;
+        width: 40%;
+        height: 500px;
+    }
 
-    div {
+    .box {
         position: relative;
-        left: 30px;
+        height: 100px;
+        text-align: center;
+        background-color: rgba(183, 183, 183, 0.584);
 
-        h3 {
-            line-height: 50px;
+        div {
+            position: relative;
+            left: 30px;
+
+            h3 {
+                line-height: 50px;
+            }
+
+            h1 {
+                line-height: 20px;
+            }
         }
 
-        h1 {
-            line-height: 20px;
+        .el-avatar {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-size: 55px;
         }
-    }
 
-    .el-avatar {
-        position: absolute;
-        top: 10px;
-        left: 30px;
-        font-size: 55px;
     }
-
 }
 </style>
