@@ -1,8 +1,10 @@
 import { createStore } from 'vuex'
 import cellInfo from './models/cellInfo'
-
+import manage from '@/store/models/manage'
+import activeManage from '@/store/models/activeManage'
 import users from "@/store/models/users";
 import VuexPersistence from 'vuex-persist'
+
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
   reducer: (state) => {
@@ -13,11 +15,6 @@ const vuexLocal = new VuexPersistence({
     }
   },
 })
-
-
-import message from '@/store/models/message'
-import manage from '@/store/models/manage'
-import activeManage from '@/store/models/activeManage'
 
 
 export default createStore({
@@ -32,7 +29,6 @@ export default createStore({
   modules: {
     cellInfo,
     users,
-    message,
     manage,
     activeManage    
   },
