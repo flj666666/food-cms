@@ -1,83 +1,200 @@
 <template>
+    <el-row :gutter="40">
+        <el-col :span="6">
+            <div class="box">
+                <el-avatar :icon="UserFilled" :size="80" />
+                <div>
+                    <h3>住户数量</h3>
+                    <h1>15100</h1>
+                </div>
+            </div>
+        </el-col>
+        <el-col :span="6">
+            <div class="box">
+                <el-avatar :icon="House" :size="80" />
+                <div>
+                    <h3>房屋总数量</h3>
+                    <h1>1900</h1>
+                </div>
+            </div>
+        </el-col>
+        <el-col :span="6">
+            <div class="box">
+                <el-avatar :icon="Van" :size="80" />
+                <div>
+                    <h3>车位总数量</h3>
+                    <h1>1800</h1>
+                </div>
+            </div>
+        </el-col>
+        <el-col :span="6">
+            <div class="box">
+                <el-avatar :icon="Tools" :size="80" />
+                <div>
+                    <h3>设备总数量</h3>
+                    <h1>1600</h1>
+                </div>
+            </div>
+        </el-col>
+    </el-row>
     <div ref="surface" class="surface"></div>
+    <div ref="surface2" class="surface2"></div>
 </template>
 
 <script setup>
-import { defineComponent, ref, onMounted } from 'vue';
+import { UserFilled ,House, Van, Tools} from '@element-plus/icons-vue'
+import { defineComponent, ref, computed, watchEffect } from 'vue';
 import * as echarts from 'echarts';
 const surface = ref()
-defineComponent({
-    name: 'HomeView'
-});
-onMounted(() => {
-    var myChart = echarts.init(surface.value);
-    var option;
-
-    option = {
+const surface2 = ref()
+const y1 = ref(800)
+const y2 = ref(1000)
+const y3 = ref(700)
+const y4 = ref(500)
+const option = computed(() => {
+    return {
         xAxis: {
             type: 'category',
-            boundaryGap: false
+            boundaryGap: false,
+            data: ['04-01', '04-02', '04-03', '04-04']
         },
         yAxis: {
-            type: 'value',
-            boundaryGap: [0, '30%']
+            type: 'value'
         },
-        visualMap: {
-            type: 'piecewise',
-            show: false,
-            dimension: 0,
-            seriesIndex: 0,
-            pieces: [
-                {
-                    gt: 1,
-                    lt: 3,
-                    color: 'rgba(0, 0, 180, 0.4)'
-                },
-                {
-                    gt: 5,
-                    lt: 7,
-                    color: 'rgba(0, 0, 180, 0.4)'
-                }
-            ]
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [{
+                offset: 0, color: 'rgb(0, 123, 231)'// 0% 处的颜色
+            }, {
+                offset: 1, color: 'rgba(0, 123, 231, 0.166)' // 100% 处的颜色
+            }],
+            globalCoord: false // 缺省为 false
         },
         series: [
             {
+                data: [y1.value, y2.value, y3.value, y4.value],
                 type: 'line',
-                smooth: 0.6,
-                symbol: 'none',
-                lineStyle: {
-                    color: '#5470C6',
-                    width: 5
+                areaStyle: {}
+            }
+        ]
+    }
+})
+const option2 = computed(() => {
+    return {
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            top: '5%',
+            left: 'center'
+        },
+        series: [
+            {
+                name: 'Access From',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
                 },
-                markLine: {
-                    symbol: ['none', 'none'],
-                    label: { show: false },
-                    data: [{ xAxis: 1 }, { xAxis: 3 }, { xAxis: 5 }, { xAxis: 7 }]
+                label: {
+                    show: false,
+                    position: 'center'
                 },
-                areaStyle: {},
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '40',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
                 data: [
-                    ['2019-10-10', 200],
-                    ['2019-10-11', 560],
-                    ['2019-10-12', 750],
-                    ['2019-10-13', 580],
-                    ['2019-10-14', 250],
-                    ['2019-10-15', 300],
-                    ['2019-10-16', 450],
-                    ['2019-10-17', 300],
-                    ['2019-10-18', 100]
+                    { value: 1048, name: 'Search Engine' },
+                    { value: 735, name: 'Direct' },
+                    { value: 580, name: 'Email' },
+                    { value: 484, name: 'Union Ads' },
+                    { value: 300, name: 'Video Ads' }
                 ]
             }
         ]
     };
-
-    option && myChart.setOption(option);
-
 })
+const myChart = computed(() => {
+    return echarts.init(surface.value)
+})
+const myChart2 = computed(() => {
+    return echarts.init(surface2.value)
+})
+
+defineComponent({
+    name: 'HomeView'
+});
+watchEffect(() => {
+    option.value && myChart.value.setOption(option.value);
+}, {
+    flush: 'post'
+})
+watchEffect(() => {
+    option2.value && myChart2.value.setOption(option2.value);
+}, {
+    flush: 'post'
+})
+
+
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .surface {
-    width: 700px;
-    height: 400px;
+    float: left;
+    width: 60%;
+    height: 500px;
+}
+.surface2 {
+    float: right;
+    width: 40%;
+    height: 500px;
+}
+
+.box {
+    position: relative;
+    height: 100px;
+    text-align: center;
+    background-color: rgba(183, 183, 183, 0.584);
+
+    div {
+        position: relative;
+        left: 30px;
+
+        h3 {
+            line-height: 50px;
+        }
+
+        h1 {
+            line-height: 20px;
+        }
+    }
+
+    .el-avatar {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        font-size: 55px;
+    }
+
 }
 </style>
