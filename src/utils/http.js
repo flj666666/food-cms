@@ -2,7 +2,7 @@
 // axios进行二次封装
 
 import axios from "axios";
-import store from '@/store/index'
+import store from '@/store'
 
 const instance = axios.create({
   baseURL: 'http://localhost:8081/api/',
