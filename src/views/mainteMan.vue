@@ -186,31 +186,39 @@
                 },
             ],
             ruleForm:{
-               name:'',
-               houseuse:'',
-               buildarea:'',
-               cellnum:'',
-               housenum:'',
-               datetime:''
+               MaintaineQuipment:'',
+               Equip:'',
+               Equipapp:'',
+               Area:'',
+               type:'',
+               people:'',
+               desc:'',
+               results:''
             },
             rules: {
-               name: [
-                  { required: true, message: '请输入楼座名称', trigger: 'blur' }
+               MaintaineQuipment: [
+                  { required: true, message: '请输入维修设备', trigger: 'blur' }
                ],
-               datetime: [
-                  { required: true, message: '请输入建成日期', trigger: 'blur' }
+               Equip: [
+                  { required: true, message: '请输入设备名称', trigger: 'blur' }
                ],
-               houseuse: [
-                  { required: true, message: '请输入房屋用途', trigger: 'blur' }
+               Equipapp: [
+                  { required: true, message: '请输入设备编写', trigger: 'blur' }
                ],
-               buildarea: [
-                  { required: true, message: '请选择楼宇面积', trigger: 'blur' }
+               Area: [
+                  { required: true, message: '请选择品牌型号', trigger: 'blur' }
                ],
-               cellnum: [
-                  { required: true, message: '请选择单元数量', trigger: 'blur' }
+               type: [
+                  { required: true, message: '请选择位置区域', trigger: 'blur' }
                ],
-               housenum: [
-                  { required: true, message: '请选择楼层数量', trigger: 'blur' }
+               people: [
+                  { required: true, message: '请选择维修人员', trigger: 'blur' }
+               ],
+               desc: [
+                  { required: true, message: '请选择故障描述', trigger: 'blur' }
+               ],
+               results: [
+                  { required: true, message: '请选择维修结果', trigger: 'blur' }
                ]
             },
             // tableData:[
