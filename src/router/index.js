@@ -5,11 +5,15 @@ import Home from '@/views/home.vue'
 import Login from '@/views/login.vue'
 import BuildMan from '@/views/buildMan.vue'
 import CellInfo from '@/views/cellInfo.vue'
+import ActiveMan from '@/views/activeMan.vue'
+import VisitMan from '@/views/visitMan.vue'
+import ComplaMan from '@/views/complaMan.vue'
 
 const routes = [
   {
     path: '/',
     name: 'index',
+    redirect:'/home',
     component: Index,
     children:[
       {
@@ -29,7 +33,25 @@ const routes = [
         name: 'buildMan',
         component: BuildMan,
         meta:{titles:['资料管理','楼座管理']}
-      }
+      },
+      {
+        path: 'visit/Man',
+        name: 'visitMan',
+        component:  VisitMan,
+        meta:{titles:['物业服务','访客管理']}
+      },
+      {
+        path: 'compla/Man',
+        name: 'complaMan',
+        component: ComplaMan,
+        meta:{titles:['物业服务','投诉管理']}
+      },
+      {
+        path: 'active/Man',
+        name: 'activeMan',
+        component: ActiveMan,
+        meta:{titles:['物业服务','活动管理']}
+      },
     ]
   },
   {
