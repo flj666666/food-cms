@@ -8,6 +8,7 @@ import CellInfo from '@/views/cellInfo.vue'
 import ActiveMan from '@/views/activeMan.vue'
 import VisitMan from '@/views/visitMan.vue'
 import ComplaMan from '@/views/complaMan.vue'
+import MainteMan from '@/views/mainteMan.vue'
 
 const routes = [
   {
@@ -33,6 +34,12 @@ const routes = [
         name: 'buildMan',
         component: BuildMan,
         meta:{titles:['资料管理','楼座管理']}
+      },
+      {
+        path: 'mainte/Man',
+        name: 'mainteMan',
+        component:  MainteMan,
+        meta:{titles:['物业服务','维修管理']}
       },
       {
         path: 'visit/Man',

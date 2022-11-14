@@ -49,6 +49,8 @@
                     <el-icon><Sunny /></el-icon>
                     <span>物业服务</span>
                   </template>
+                  <el-menu-item index="/mainte/Man">
+                      <el-icon><Apple /></el-icon>维修管理</el-menu-item>
                   <el-menu-item index="/visit/Man">
                       <el-icon><Apple /></el-icon>访客管理</el-menu-item>
                   <el-menu-item index="/compla/Man">
