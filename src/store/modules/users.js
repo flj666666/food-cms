@@ -20,7 +20,11 @@ const mutations = {
     },
     updateUsername(state,payload){
         state.username = payload;
+    },
+    clearToken(state){
+      state.token=''
     }
+
 };
 
 
