@@ -364,7 +364,7 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
   .all{
     width: 1000px;
     margin-left: 100px;

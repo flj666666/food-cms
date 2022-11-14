@@ -106,8 +106,7 @@
             layout="total,prev, pager, next,jumper"
             :total="total"
             v-model:current-page="currentPage"
-            v-model:page-size="pagesize"
-            
+            v-model:page-size="pagesize"  
         />
         </div>
     </div>
