@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import cellInfo from './modules/cellInfo'
 
 import users from "@/store/modules/users";
 import VuexPersistence from 'vuex-persist'
@@ -29,17 +30,13 @@ export default createStore({
   actions: {
   },
   modules: {
+    cellInfo,
     users,
     message,
     manage,
     activeManage    
   },
   plugins: [vuexLocal.plugin]
-
-
-
-    
-  
   }
 
 )
