@@ -162,7 +162,7 @@ watchEffect(() => {
 
 <style scoped lang="scss">
 .all {
-    margin-top: 20px;
+    margin-top: 14px;
     overflow-x: hidden;
     .surface {
         float: left;
