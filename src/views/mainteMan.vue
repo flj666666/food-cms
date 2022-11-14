@@ -30,20 +30,17 @@
            </div>
            <el-table :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)" style="width: 100%">
 
-                <el-table-column prop="name" label="报修房屋" width="160">
+                <el-table-column prop="houserepair" label="报修房屋" width="160">
                   
                 </el-table-column>
-                <el-table-column prop="houseuse" label="维修项目" width="130">
+                <el-table-column prop="mainteproject;" label="维修项目" width="130">
                   
                 </el-table-column>
                 <el-table-column prop="title" label="标题" width="130">
-                  
                 </el-table-column>
-                <el-table-column prop="" label="报修人" width="130">
-                  
+                <el-table-column prop="people" label="报修人" width="130">
                 </el-table-column>
-                <el-table-column prop="housenum" label="预约日期" width="130">
-                  
+                <el-table-column prop="predata" label="预约日期" width="130">
                 </el-table-column>
                 <el-table-column prop="status" label="维修状态" width="120">
                   
@@ -72,58 +69,65 @@
             :rules="rules"
             label-width="80px"
          >
-         <el-form-item label="楼座名称" prop="name">
+         <el-form-item label="维修设备" prop="MaintaineQuipment">
             <el-input
-            v-model="ruleForm.name"
-            type="name"
+            v-model="ruleForm.MaintaineQuipment"
+            type="MaintaineQuipment"
             autocomplete="off"
             placeholder="请输入"
             />
          </el-form-item>
-         <el-form-item label="建成日期" prop="datetime">
-                <div class="block">
-                <el-date-picker
-                    v-model="ruleForm.datetime"
-                    type="datetime"
-                    placeholder="请输入日期"
-                />
-                </div>
-         </el-form-item>
-         <el-form-item label="房屋用途" prop="houseuse">
-            <!-- <el-input
-            v-model="ruleForm.houseuse"
-            type="houseuse"
+         <el-form-item label="设备名称" prop="Equip">
+            <el-input
+            v-model="ruleForm.Equip"
+            type="Equip"
             autocomplete="off"
-            placeholder="请选择"
-            /> -->
-            <!-- <el-select v-model="ruleForm.houseuse" class="m-2" placeholder="请选择" size="large"> -->
+            placeholder="请输入"
+            />
+         </el-form-item>
+         <el-form-item label="设备编写" prop="Equipapp">
                 <el-tree-select
-                v-model="ruleForm.houseuse"
-                :data="list"
+                v-model="ruleForm.Equipapp"
+                :data="Equipapp"
                 :render-after-expand="false"
                 placeholder="请选择"
                 show-checkbox
             />
-            <!-- </el-select> -->
          </el-form-item>
-         <el-form-item label="楼宇面积" prop="buildarea">
+         <el-form-item label="品牌型号" prop="type">
             <el-input
-            v-model="ruleForm.buildarea"
-            type="buildarea"
+            v-model="ruleForm.type"
+            type="type"
             autocomplete="off"
             />
          </el-form-item>
-         <el-form-item label="单元数量" prop="cellnum">
+         <el-form-item label="位置区域" prop="Area">
             <el-input
-            v-model="ruleForm.cellnum"
-            type="cellnum"
+            v-model="ruleForm.Area"
+            type="Area"
             autocomplete="off"
             />
          </el-form-item>
-         <el-form-item label="楼层数量" prop="housenum">
+         <el-form-item label="维修人员" prop="people">
             <el-input
-            v-model="ruleForm.housenum"
-            type="housenum"
+            v-model="ruleForm.people"
+            type="people"
+            autocomplete="off"
+            />
+         </el-form-item>
+         <el-form-item label="故障描述" prop="desc">
+            <div class="block">
+                <el-date-picker
+                    v-model="ruleForm.desc"
+                    type="desc"
+                    placeholder="请输入日期"
+                />
+                </div>
+         </el-form-item>
+         <el-form-item label="维修结果" prop="results">
+            <el-input
+            v-model="ruleForm.results"
+            type="results"
             autocomplete="off"
             />
          </el-form-item>

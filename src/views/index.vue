@@ -93,8 +93,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     color:antiquewhite;
-    position: sticky;
-    top:0;
+    /* position: sticky;
+    top:0; */
   }
   .el-header span{
     color:antiquewhite
@@ -102,13 +102,13 @@ export default {
   .el-aside{
     background: #999;
     height: calc(100vh);
-    position: fixed;
+    /* position: fixed;
     top:60px;
-    left:0; 
+    left:0;  */
   }
    .el-dropdown-link{
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 } 
 .el-menu, .el-menu-item{
   background: #999;
@@ -123,10 +123,10 @@ export default {
 }
 .el-main{
   background: #fff;
-  margin-bottom: 60px;
-  position: fixed;
+  /* margin-bottom: 60px; */
+  /* position: fixed;
   top:60px;
-  left:200px;
-  bottom: 20px;
+  left:200px; */
+  /* bottom: 20px; */
 }
 </style>
