@@ -35,13 +35,31 @@
               </el-icon>
               <span>资料管理</span>
             </template>
+            <el-menu-item index="/cell/Info">
+              <el-icon>
+                <Apple />
+              </el-icon>小区信息
+            </el-menu-item>
             <el-menu-item index="/build/Man">
               <el-icon>
                 <GobletSquare />
               </el-icon>楼座管理
             </el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="/manager">
+          <el-sub-menu index="/home">
+            <template #title>
+              <el-icon>
+                <Sunny />
+              </el-icon>
+              <span>车行管理</span>
+            </template>
+            <el-menu-item>
+              <el-icon>
+                <Moon />
+              </el-icon>区域管理
+            </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu>
             <template #title>
               <el-icon>
                 <Sunny />
@@ -69,7 +87,32 @@
               </el-icon>活动管理
             </el-menu-item>
           </el-sub-menu>
-
+          <el-sub-menu index="/cell/Info">
+            <template #title>
+              <el-icon>
+                <Sunny />
+              </el-icon>
+              <span>缴费管理</span>
+            </template>
+            <el-menu-item>
+              <el-icon>
+                <Moon />
+              </el-icon>账单管理
+            </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu index="/">
+            <template #title>
+              <el-icon>
+                <Sunny />
+              </el-icon>
+              <span>设备管理</span>
+            </template>
+            <el-menu-item>
+              <el-icon>
+                <Moon />
+              </el-icon>区域管理
+            </el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
       <el-main>
@@ -107,7 +150,7 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
+<style scoped>
 .el-header {
   background: #333;
   display: flex;
@@ -124,8 +167,10 @@ export default {
   display: flex;
   align-items: center;
 }
-
-.el-aside {
+.el-scrollbar {
   height: calc(100vh - 94px) !important;
+}
+.el-menu{
+  height: calc(100vh - 60px) !important;
 }
 </style>
