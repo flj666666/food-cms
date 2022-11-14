@@ -5,6 +5,9 @@
         <h2>智慧物业管理系统</h2>
           <el-dropdown>
           <span class="el-dropdown-link">
+            <el-avatar
+              src="https://img1.baidu.com/it/u=4152550407,1477008835&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+            />
             欢迎:管理员
             <el-icon><ArrowDown /></el-icon>
           </span>
@@ -41,11 +44,19 @@
                     <el-menu-item>
                       <el-icon><Moon /></el-icon>区域管理</el-menu-item>
                 </el-sub-menu>
-                <el-sub-menu index="/build/Man">
+                <el-sub-menu >
                   <template #title>
                     <el-icon><Sunny /></el-icon>
                     <span>物业服务</span>
                   </template>
+                  <el-menu-item index="/mainte/Man">
+                      <el-icon><Apple /></el-icon>维修管理</el-menu-item>
+                  <el-menu-item index="/visit/Man">
+                      <el-icon><Apple /></el-icon>访客管理</el-menu-item>
+                  <el-menu-item index="/compla/Man">
+                      <el-icon><Apple /></el-icon>投诉管理</el-menu-item>
+                  <el-menu-item index="/active/Man">
+                      <el-icon><Apple /></el-icon>活动管理</el-menu-item>
                 </el-sub-menu>
                 <el-sub-menu index="/cell/Info">
                   <template #title>
@@ -105,21 +116,26 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:antiquewhite
+    color:antiquewhite;
+    position: sticky;
+    top:0;
   }
   .el-header span{
     color:antiquewhite
   }
   .el-aside{
-    background: #fff;
+    background: #999;
     height: calc(100vh);
+    position: fixed;
+    top:60px;
+    left:0; 
   }
    .el-dropdown-link{
   display: flex;
   align-items: center;
 } 
 .el-menu, .el-menu-item{
-  background: #fff;
+  background: #999;
 }
 .avatar-uploader .el-upload {
   border: 1px dashed var(--el-border-color);
@@ -131,5 +147,10 @@ export default {
 }
 .el-main{
   background: #fff;
+  margin-bottom: 60px;
+  position: fixed;
+  top:60px;
+  left:200px;
+  bottom: 20px;
 }
 </style>

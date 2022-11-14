@@ -1,17 +1,9 @@
 <template>
     <div class="all">
-           <h3>楼座管理</h3>
+           <h3>报修管理</h3>
            <div class="box1">
             <div>
-                房屋用途:
-                <!-- <el-tree-select
-                    v-model="value"
-                    :data="data"
-                    :render-after-expand="false"
-                    placeholder="请选择"
-                    show-checkbox
-                    @ente="handleSelect(value)"
-                />  -->
+                报修状态:
                 <el-select v-model="value" class="m-2" placeholder="Select">
                     <el-option
                     v-for="item in options"
@@ -23,7 +15,7 @@
                 </el-select>
             </div>
             <div>
-                楼座名称：<el-input v-model="input2" class="classInput" placeholder="请输入" />
+                预约日期：<el-input v-model="input2" class="classInput" placeholder="请输入" />
             </div>
             <div>
                 <el-button type="primary" @click="handleFind">查询</el-button>
@@ -31,31 +23,31 @@
             </div>
         </div>
         <div class="box2">
-              <h5>楼座列表</h5>
+              <h5>报修列表</h5>
            <div class="boxchildren">
              <el-button type="primary" @click="handleAdd"><el-icon><Plus /></el-icon>新建</el-button>
              <el-button>批量操作</el-button>
            </div>
            <el-table :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)" style="width: 100%">
 
-                <el-table-column prop="name" label="楼座名称" width="160">
+                <el-table-column prop="name" label="报修房屋" width="160">
                   
                 </el-table-column>
-                <el-table-column prop="houseuse" label="房屋用途" width="160">
+                <el-table-column prop="houseuse" label="维修项目" width="130">
                   
                 </el-table-column>
-                <el-table-column prop="datetime" label="建成日期" width="160">
+                <el-table-column prop="title" label="标题" width="130">
                   
                 </el-table-column>
-                <el-table-column prop="cellnum" label="单元数量" width="160">
+                <el-table-column prop="" label="报修人" width="130">
                   
                 </el-table-column>
-                <el-table-column prop="housenum" label="楼层数量" width="160">
+                <el-table-column prop="housenum" label="预约日期" width="130">
                   
                 </el-table-column>
-                <!-- <el-table-column prop="notes" label="备注" width="160"/> -->
-                <!-- <el-table-column prop="operate" label="操作" width="160" >  
-                </el-table-column> -->
+                <el-table-column prop="status" label="维修状态" width="120">
+                  
+                </el-table-column>
                 <el-table-column label="操作" width="160">
                   <template  #default="scope">
                     <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
