@@ -17,7 +17,6 @@ const routes = [
     name: 'index',
     redirect:'/home',
     component: Index,
-    redirect:'/home',
     meta:{ auth : true},
     children:[
       {
