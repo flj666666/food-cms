@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+
 import users from "@/store/modules/users";
 import VuexPersistence from 'vuex-persist'
 const vuexLocal = new VuexPersistence({
@@ -11,6 +12,13 @@ const vuexLocal = new VuexPersistence({
     }
   },
 })
+
+import users from '@/store/models/users'
+import message from '@/store/models/message'
+import manage from '@/store/models/manage'
+import activeManage from '@/store/models/activeManage'
+
+
 export default createStore({
   state: {
   },
@@ -21,9 +29,17 @@ export default createStore({
   actions: {
   },
   modules: {
-    users,    
+    users,
+    message,
+    manage,
+    activeManage    
   },
   plugins: [vuexLocal.plugin]
 
 
-})
+
+    
+  
+  }
+
+)
