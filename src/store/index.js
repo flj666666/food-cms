@@ -14,6 +14,7 @@ const vuexLocal = new VuexPersistence({
   },
 })
 
+
 import message from '@/store/models/message'
 import manage from '@/store/models/manage'
 import activeManage from '@/store/models/activeManage'
