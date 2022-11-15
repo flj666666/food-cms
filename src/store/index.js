@@ -4,6 +4,7 @@ import manage from '@/store/models/manage'
 import activeManage from '@/store/models/activeManage'
 import users from "@/store/models/users";
 import VuexPersistence from 'vuex-persist'
+import mainteMan from './models/mainteMan';
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
@@ -30,7 +31,8 @@ export default createStore({
     cellInfo,
     users,
     manage,
-    activeManage    
+    activeManage,
+    mainteMan    
   },
   plugins: [vuexLocal.plugin]
   }

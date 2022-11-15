@@ -46,20 +46,7 @@
               </el-icon>楼座管理
             </el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="/home">
-            <template #title>
-              <el-icon>
-                <Sunny />
-              </el-icon>
-              <span>车行管理</span>
-            </template>
-            <el-menu-item>
-              <el-icon>
-                <Moon />
-              </el-icon>区域管理
-            </el-menu-item>
-          </el-sub-menu>
-          <el-sub-menu>
+          <el-sub-menu index="/mainteMan">
             <template #title>
               <el-icon>
                 <Sunny />
@@ -87,19 +74,6 @@
               </el-icon>活动管理
             </el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="/cell/Info">
-            <template #title>
-              <el-icon>
-                <Sunny />
-              </el-icon>
-              <span>缴费管理</span>
-            </template>
-            <el-menu-item>
-              <el-icon>
-                <Moon />
-              </el-icon>账单管理
-            </el-menu-item>
-          </el-sub-menu>
           <el-sub-menu index="/">
             <template #title>
               <el-icon>
@@ -107,11 +81,6 @@
               </el-icon>
               <span>设备管理</span>
             </template>
-            <el-menu-item>
-              <el-icon>
-                <Moon />
-              </el-icon>区域管理
-            </el-menu-item>
           </el-sub-menu>
         </el-menu>
       </el-aside>

@@ -79,24 +79,6 @@
   ],
   "manage": [
     {
-      "name": "C座",
-      "houseuse": "普通住宅",
-      "buildarea": "100平方米",
-      "cellnum": "91",
-      "housenum": "19",
-      "datetime": "2022-11-13T02:03:33.000Z",
-      "id": 50
-    },
-    {
-      "name": "E座",
-      "houseuse": "普通住宅",
-      "buildarea": "101平方米",
-      "cellnum": "100",
-      "housenum": "9999",
-      "datetime": "2022-11-07T16:00:00.000Z",
-      "id": 51
-    },
-    {
       "name": "A座",
       "houseuse": "普通住宅",
       "buildarea": "101平方米",
@@ -277,6 +259,19 @@
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 17
+    }
+  ],
+  "mainteMan": [
+    {
+      "houserepair": "A座",
+      "Equip": "电冰箱",
+      "Equipapp": "电冰箱没有冰",
+      "Area": "15012341234",
+      "type": "电冰箱没有冰，嗡嗡响",
+      "people": "六号楼，四单元",
+      "desc": "2022-11-09T16:00:00.000Z",
+      "results": "明天有空",
+      "id": 1
     }
   ]
 }
