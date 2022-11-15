@@ -97,17 +97,14 @@
       "email": "ffff@163.com",
       "password": "$2a$10$Mfsgy1b7JvORHBqXCIITc.sVybARWNmCcDEp.QtvUTCXfqLQgoPby",
       "id": 6
-}],
+
+    }
+  ],
+  
+
+
+
   "manage": [
-    {
-      "name": "D座",
-      "houseuse": "商业用地",
-      "buildarea": "101平方米",
-      "cellnum": "51",
-      "housenum": "15",
-      "datetime": "2022-11-12T16:00:00.000Z",
-      "id": 43
-    },
     {
       "name": "G座",
       "houseuse": "商业用地",
@@ -352,7 +349,6 @@
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 17
-
     }
   ]
 }
