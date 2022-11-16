@@ -144,9 +144,8 @@
      </el-dialog>
 
      <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            background
+            @size-change="handleSizeChange()"
+            @current-change="handleCurrentChange()"
             layout="total,prev, pager, next,jumper"
             :total="total"
             v-model:current-page="currentPage"
@@ -294,11 +293,11 @@
             this.id=row.id
         },
         handleDelete(index,row){
-            
+           
             this.$store.dispatch('manage/removeList',row.id).then((res)=>{
                     //   console.log("newList================",res.data);
                     if(res){
-                        this.$store.commit('manage/deleteList',row.id)
+                        this.$store.commit('manage/deleteList',index)
                         ElMessage.success('删除成功') 
                     }
                     

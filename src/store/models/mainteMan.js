@@ -1,6 +1,7 @@
 import http from '@/utils/http'
 const state ={
-   list:[]
+   list:[],
+   
 }
 const getters={
     
@@ -33,8 +34,7 @@ const mutations={
     },
     //删除
     deleteList(state,payload){
-       let index=state.list.findIndex(item=>item.payload===payload)
-       state.list.splice(index,1)
+       state.list.splice(payload,1)
        // console.log("state.list=============",state.list);
     },
     //更新

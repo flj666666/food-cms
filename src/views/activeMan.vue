@@ -189,7 +189,7 @@
             this.$store.dispatch('activeManage/removeList',row.id).then((res)=>{
                     //   console.log("newList================",res.data);
                     if(res){
-                        this.$store.commit('activeManage/deleteList',row.id)
+                        this.$store.commit('activeManage/deleteList',index)
                         ElMessage.success('删除成功') 
                     }
                     
