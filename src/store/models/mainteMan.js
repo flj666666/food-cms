@@ -1,25 +1,26 @@
 import http from '@/utils/http'
 const state ={
-   list:[]
+   list:[],
+   
 }
 const getters={
     
 }
 const actions={
     addManage(context,payload){
-       return http.post('/activeManage',payload)
+       return http.post('/mainteMan',payload)
     },
     findList(){
-         return http.get('/activeManage')
-        //  return http.get('/activeManage?_limit=5')
+         return http.get('/mainteMan')
+        //  return http.get('/mainteMan?_limit=5')
     },
     removeList(context,payload){
         
-        return http.delete(`/activeManage/${payload}`)
+        return http.delete(`/mainteMan/${payload}`)
         //  context.commit('setList',payload)
     },
     updataList(context,payload){
-        return http.put(`/activeManage/${payload.id}`,payload.payload)
+        return http.put(`/mainteMan/${payload.id}`,payload.payload)
     }
 }
 const mutations={

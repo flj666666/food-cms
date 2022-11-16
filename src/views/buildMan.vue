@@ -124,14 +124,14 @@
          <el-form-item label="单元数量" prop="cellnum">
             <el-input
             v-model="ruleForm.cellnum"
-            type="cellnum"
+            type="number"
             autocomplete="off"
             />
          </el-form-item>
          <el-form-item label="楼层数量" prop="housenum">
             <el-input
             v-model="ruleForm.housenum"
-            type="housenum"
+            type="number"
             autocomplete="off"
             />
          </el-form-item>
@@ -146,7 +146,6 @@
      <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
-            background
             layout="total,prev, pager, next,jumper"
             :total="total"
             v-model:current-page="currentPage"
@@ -264,7 +263,7 @@
         },
         handleSizeChange(val){
            this.pagesize=val;
-           this.page=1
+        //    this.currentPage=1
         },
         handleFind(){
             this.$store.dispatch('manage/findList').then((res)=>{
@@ -294,11 +293,11 @@
             this.id=row.id
         },
         handleDelete(index,row){
-            
+           
             this.$store.dispatch('manage/removeList',row.id).then((res)=>{
                     //   console.log("newList================",res.data);
                     if(res){
-                        this.$store.commit('manage/deleteList',row.id)
+                        this.$store.commit('manage/deleteList',index)
                         ElMessage.success('删除成功') 
                     }
                     

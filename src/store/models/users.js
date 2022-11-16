@@ -8,7 +8,7 @@ const getters = {};
 const actions = {
 
  login(context, payload){
-    return http.post('/login', payload)
+      return http.post('/login', payload)
   },
     info(){
    return http.get('/users')
@@ -22,10 +22,10 @@ const mutations = {
    updateToken(state,payload){
      state.token = payload;
   },
- updateUsername(state,payload){
+    updateUsername(state,payload){
     state.username = payload;
     },
-    clearToken(state){
+     clearToken(state){
       state.token=''
    }
 
