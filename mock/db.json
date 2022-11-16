@@ -79,49 +79,13 @@
   ],
   "manage": [
     {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "102平方米",
-      "cellnum": "wer",
-      "housenum": "rhhhhhhhhhhhe",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 16
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "102平方米",
-      "cellnum": "23456",
-      "housenum": "6666dfghj66",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 18
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "102平方米",
-      "cellnum": "23456",
-      "housenum": "3456",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 20
-    },
-    {
       "name": "D座",
-      "houseuse": "商业用地",
-      "buildarea": "101平方米",
-      "cellnum": "81",
-      "housenum": "18",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 21
-    },
-    {
-      "name": "D座",
-      "houseuse": "商住两用",
+      "houseuse": "普通住宅",
       "buildarea": "110平方米",
       "cellnum": "61",
       "housenum": "16",
       "datetime": "2022-11-13T16:00:00.000Z",
-      "id": 22
+      "id": 1
     },
     {
       "name": "C座",
@@ -130,7 +94,34 @@
       "cellnum": "6",
       "housenum": "5",
       "datetime": "2022-11-06T16:00:00.000Z",
-      "id": 23
+      "id": 2
+    },
+    {
+      "name": "B座",
+      "houseuse": "商业用地",
+      "buildarea": "102平方米",
+      "cellnum": "9",
+      "housenum": "8",
+      "datetime": "2022-11-13T16:00:00.000Z",
+      "id": 3
+    },
+    {
+      "name": "D座",
+      "houseuse": "商住两用",
+      "buildarea": "150平方米",
+      "cellnum": "61",
+      "housenum": "16",
+      "datetime": "2022-11-13T16:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "C座",
+      "houseuse": "普通住宅",
+      "buildarea": "99平方米",
+      "cellnum": "6",
+      "housenum": "5",
+      "datetime": "2022-11-06T16:00:00.000Z",
+      "id": 5
     },
     {
       "name": "D座",
@@ -139,24 +130,24 @@
       "cellnum": "9",
       "housenum": "8",
       "datetime": "2022-11-13T16:00:00.000Z",
-      "id": 24
+      "id": 6
     }
   ],
   "activeManage": [
     {
       "author": "物业服务中心",
       "title": "南航碧桂园社区开展垃圾分类活动",
-      "name": "小江",
+      "name": "小阳",
       "number": "120",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天吃饭了吗",
       "id": 1
     },
     {
       "author": "物业服务中心",
       "title": "南航碧桂园社区开展垃圾分类活动",
       "name": "小江",
-      "number": "120",
+      "number": "98",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 3
@@ -164,8 +155,8 @@
     {
       "author": "物业服务中心",
       "title": "南航碧桂园社区开展垃圾分类活动",
-      "name": "小江",
-      "number": "120",
+      "name": "小李",
+      "number": "73600",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 4
@@ -173,19 +164,19 @@
     {
       "author": "物业服务中心",
       "title": "南航碧桂园社区开展垃圾分类活动",
-      "name": "小江",
-      "number": "120",
+      "name": "小红",
+      "number": "98250",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天天气很好",
       "id": 5
     },
     {
       "author": "物业服务中心",
       "title": "南航碧桂园社区开展垃圾分类活动",
-      "name": "小江",
-      "number": "120",
+      "name": "小明",
+      "number": "12234560",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天吃饭了吗",
       "id": 6
     },
     {
@@ -194,39 +185,39 @@
       "name": "小江",
       "number": "120",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天天气很好",
       "id": 7
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "本社区歌唱比赛",
       "name": "小江",
       "number": "120",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天天气很好",
       "id": 8
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "本社区歌唱比赛",
       "name": "小江",
       "number": "120",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天天气很好",
       "id": 9
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "本社区歌唱比赛",
       "name": "小江",
       "number": "120",
       "pushDate": "2021/11/11",
-      "detail": "大家吃好喝好玩好",
+      "detail": "今天天气很好",
       "id": 10
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "本社区歌唱比赛",
       "name": "小江",
       "number": "120",
       "pushDate": "2021/11/11",
@@ -235,36 +226,36 @@
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "书法大赛",
       "name": "小江",
-      "number": "120",
+      "number": "230",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 12
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "书法大赛",
       "name": "小江",
-      "number": "120",
+      "number": "230",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 13
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "书法大赛",
       "name": "小江",
-      "number": "120",
+      "number": "230",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 14
     },
     {
       "author": "物业服务中心",
-      "title": "南航碧桂园社区开展垃圾分类活动",
+      "title": "书法大赛",
       "name": "小江",
-      "number": "120",
+      "number": "230",
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 15
@@ -300,29 +291,16 @@
       "results": "还在开发",
       "number": "15012341234",
       "status": "审核通过",
-      "id": 4
-    },
-    {
-      "houserepair": "A座",
-      "Equip": "电风扇",
-      "title": "电风扇不转动",
-      "desc": "没插电所以没有转",
-      "type": "",
-      "people": "8单元401",
-      "predata": "2022-11-15T16:00:00.000Z",
-      "results": "还在开发",
-      "number": "15012341234",
-      "status": "审核通过",
       "id": 5
     },
     {
-      "houserepair": "A座",
-      "Equip": "电风扇",
-      "title": "电风扇不转动",
+      "houserepair": "C座",
+      "Equip": "电冰箱",
+      "title": "冷冻不好使",
       "desc": "没插电所以没有转",
       "type": "",
-      "people": "8单元401",
-      "predata": "2022-11-15T16:00:00.000Z",
+      "people": "3单元304",
+      "predata": "2022-10-15T16:00:00.000Z",
       "results": "还在开发",
       "number": "15012341234",
       "status": "审核中",
@@ -334,7 +312,7 @@
       "title": "电风扇不转动",
       "desc": "没插电所以没有转",
       "type": "",
-      "people": "8单元401",
+      "people": "6单元401",
       "predata": "2022-11-15T16:00:00.000Z",
       "results": "还在开发",
       "number": "15012341234",
@@ -342,16 +320,16 @@
       "id": 7
     },
     {
-      "houserepair": "A座",
-      "Equip": "电风扇",
-      "title": "电风扇不转动",
+      "houserepair": "D座",
+      "Equip": "电冰箱",
+      "title": "冷冻不好使",
       "desc": "没插电所以没有转",
       "type": "",
-      "people": "8单元401",
-      "predata": "2022-11-15T16:00:00.000Z",
+      "people": "5单元401",
+      "predata": "2022-09-15T16:00:00.000Z",
       "results": "还在开发",
       "number": "15012341234",
-      "status": "审核通过",
+      "status": "审核中",
       "id": 8
     },
     {
@@ -360,24 +338,24 @@
       "title": "电风扇不转动",
       "desc": "没插电所以没有转",
       "type": "",
-      "people": "8单元401",
-      "predata": "2022-11-15T16:00:00.000Z",
+      "people": "9单元401",
+      "predata": "2020-11-25T16:00:00.000Z",
       "results": "还在开发",
-      "number": "15012341234",
+      "number": "15501231234",
       "status": "审核中",
       "id": 9
     },
     {
-      "houserepair": "A座",
-      "Equip": "电风扇",
-      "title": "电风扇不转动",
+      "houserepair": "D座",
+      "Equip": "电冰箱",
+      "title": "冷冻不好使",
       "desc": "没插电所以没有转",
       "type": "",
       "people": "8单元401",
-      "predata": "2022-11-15T16:00:00.000Z",
+      "predata": "2022-10-15T16:00:00.000Z",
       "results": "还在开发",
       "number": "15012341234",
-      "status": "审核通过",
+      "status": "审核中",
       "id": 10
     },
     {
