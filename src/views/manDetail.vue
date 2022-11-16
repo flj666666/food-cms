@@ -219,14 +219,12 @@
           handleReturn(){
             this.drawer=false;
           },
-          handlePass(){
-             
-             this.$store.dispatch('mainteMan/findList').then((res)=>{
-                console.log(res.data);
-                //  if(res.data.status==='审核通过'){
-                //     ElMessage.success('审核通过')
-                //  }
-             })
+          handlePass(){ 
+            //  this.$store.dispatch('mainteMan/findList').then((res)=>{
+            //     this.$store.commit('mainteMan/setList',{status:this.ruleForm.status})
+                   
+            //  })
+             ElMessage.success('审核通过')
              this.$router.push('/mainte/Man')
           },
           handleNoPass(){

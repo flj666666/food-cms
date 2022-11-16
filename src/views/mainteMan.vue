@@ -290,7 +290,7 @@ import { ElMessage } from 'element-plus';
         },
         handleSizeChange(val){
            this.pagesize=val;
-           this.page=1
+        //    this.page=1
         },
         handleFind(){
             this.$store.dispatch('mainteMan/findList').then((res)=>{

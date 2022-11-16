@@ -124,14 +124,14 @@
          <el-form-item label="单元数量" prop="cellnum">
             <el-input
             v-model="ruleForm.cellnum"
-            type="cellnum"
+            type="number"
             autocomplete="off"
             />
          </el-form-item>
          <el-form-item label="楼层数量" prop="housenum">
             <el-input
             v-model="ruleForm.housenum"
-            type="housenum"
+            type="number"
             autocomplete="off"
             />
          </el-form-item>
@@ -144,8 +144,8 @@
      </el-dialog>
 
      <el-pagination
-            @size-change="handleSizeChange()"
-            @current-change="handleCurrentChange()"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
             layout="total,prev, pager, next,jumper"
             :total="total"
             v-model:current-page="currentPage"
@@ -263,7 +263,7 @@
         },
         handleSizeChange(val){
            this.pagesize=val;
-           this.page=1
+        //    this.currentPage=1
         },
         handleFind(){
             this.$store.dispatch('manage/findList').then((res)=>{

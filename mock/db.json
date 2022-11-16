@@ -82,28 +82,10 @@
       "name": "B座",
       "houseuse": "普通住宅",
       "buildarea": "102平方米",
-      "cellnum": "wertg",
-      "housenum": "wregrhgn",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 14
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "102平方米",
       "cellnum": "wer",
       "housenum": "rhhhhhhhhhhhe",
       "datetime": "2022-11-05T16:00:00.000Z",
       "id": 16
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "102平方米",
-      "cellnum": "w3erfgh",
-      "housenum": "ert",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 17
     },
     {
       "name": "B座",
@@ -122,6 +104,42 @@
       "housenum": "3456",
       "datetime": "2022-11-05T16:00:00.000Z",
       "id": 20
+    },
+    {
+      "name": "D座",
+      "houseuse": "商业用地",
+      "buildarea": "101平方米",
+      "cellnum": "81",
+      "housenum": "18",
+      "datetime": "2022-11-05T16:00:00.000Z",
+      "id": 21
+    },
+    {
+      "name": "D座",
+      "houseuse": "商住两用",
+      "buildarea": "110平方米",
+      "cellnum": "61",
+      "housenum": "16",
+      "datetime": "2022-11-13T16:00:00.000Z",
+      "id": 22
+    },
+    {
+      "name": "C座",
+      "houseuse": "商住两用",
+      "buildarea": "99平方米",
+      "cellnum": "6",
+      "housenum": "5",
+      "datetime": "2022-11-06T16:00:00.000Z",
+      "id": 23
+    },
+    {
+      "name": "D座",
+      "houseuse": "商业用地",
+      "buildarea": "102平方米",
+      "cellnum": "9",
+      "housenum": "8",
+      "datetime": "2022-11-13T16:00:00.000Z",
+      "id": 24
     }
   ],
   "activeManage": [
