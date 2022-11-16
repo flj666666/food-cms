@@ -1,7 +1,8 @@
 import http from "@/utils/http";
 
 const state = {
-    token:''
+    token:'',
+    
 };
 const getters = {};
 const actions = {
@@ -11,9 +12,13 @@ const actions = {
   },
     info(){
    return http.get('/users')
+  },
+  register(context,payload){
+    return http.post('/register',payload)
   }
 };
 const mutations = {
+   
    updateToken(state,payload){
      state.token = payload;
   },

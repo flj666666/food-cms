@@ -10,6 +10,7 @@ import ActiveMan from '@/views/activeMan.vue'
 import VisitMan from '@/views/visitMan.vue'
 import ComplaMan from '@/views/complaMan.vue'
 import MainteMan from '@/views/mainteMan.vue'
+import Register from '@/views/register.vue'
 import store from '@/store'
 
 const routes = [
@@ -69,6 +70,13 @@ const routes = [
     name: 'login',
     component: Login,
     meta:{ auth : false}
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
+    meta:{titles:['注册页']}
+    
   }
   
 ]

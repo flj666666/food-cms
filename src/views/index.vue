@@ -107,7 +107,12 @@ export default {
           this.$store.commit('users/clearToken')
           window.location.href='/login'
       }
-     }
+     },
+    //  mounted(){
+    //   if(!this.$store.state.users.addRemove){
+    //     this.$store.commit('users/clearToken')
+    //   }
+    //  }
 }
 </script>
 <style scoped>
