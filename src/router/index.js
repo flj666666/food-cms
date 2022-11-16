@@ -12,7 +12,6 @@ import ComplaMan from '@/views/complaMan.vue'
 import MainteMan from '@/views/mainteMan.vue'
 import store from '@/store'
 
-
 const routes = [
   {
     path: '/',
@@ -99,6 +98,7 @@ router.beforeEach((to, from, next)=>{
     next()
   }
 
-})
+   })
+
 
 export default router
