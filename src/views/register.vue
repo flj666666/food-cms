@@ -127,7 +127,7 @@ export default {
 }
 </style>
 <style>
- .el-form-item__label {
+.register-container .el-form-item__label {
   color: white !important;
 }
 </style>
