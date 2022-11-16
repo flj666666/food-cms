@@ -15,7 +15,13 @@
                 </el-select>
             </div>
             <div>
-                预约日期：<el-input v-model="input2" class="classInput" placeholder="请输入" />
+                <div class="block">
+                预约日期：
+                <el-date-picker
+                    v-model="ruleForm.predata"
+                    type="predata"
+                />
+                </div>
             </div>
             <div>
                 <el-button type="primary" @click="handleFind">查询</el-button>
@@ -30,23 +36,24 @@
            </div>
            <el-table :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)" style="width: 100%">
 
-                <el-table-column prop="houserepair" label="报修房屋" width="160">
+                <el-table-column prop="houserepair" label="报修房屋">
 
                 </el-table-column>
-                <el-table-column prop="mainteproject;" label="维修项目" width="130">
+                <el-table-column prop="Equip" label="维修项目">
 
                 </el-table-column>
-                <el-table-column prop="title" label="标题" width="130">
+                <el-table-column prop="title" label="标题">
                 </el-table-column>
-                <el-table-column prop="people" label="报修人" width="130">
+                <el-table-column prop="people" label="报修人">
                 </el-table-column>
-                <el-table-column prop="predata" label="预约日期" width="130">
+                <el-table-column prop="predata" label="预约日期">
                 </el-table-column>
-                <el-table-column prop="status" label="维修状态" width="120">
+                <el-table-column prop="status" label="维修状态">
                   
                 </el-table-column>
-                <el-table-column label="操作" width="160">
+                <el-table-column label="操作" width="200">
                   <template  #default="scope">
+                    <el-button size="small" @click="handleAudit(scope.$index, scope.row)">审核</el-button>
                     <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
                     <el-button
                     size="small"
@@ -92,7 +99,7 @@
             placeholder="请输入"
             />
          </el-form-item>
-         <el-form-item label="标题" prop="Equipapp">
+         <el-form-item label="标题" prop="title">
                 <!-- <el-tree-select
                 v-model="ruleForm.Equipapp"
                 :data="Equipapp"
@@ -101,23 +108,23 @@
                 show-checkbox
             /> -->
             <el-input
-            v-model="ruleForm.Equipapp"
-            type="Equipapp"
+            v-model="ruleForm.title"
+            type="title"
             autocomplete="off"
             placeholder="请输入"
             />
          </el-form-item>
-         <el-form-item label="问题描述" prop="type">
+         <el-form-item label="问题描述" prop="desc">
             <el-input
-            v-model="ruleForm.type"
-            type="type"
+            v-model="ruleForm.desc"
+            type="desc"
             autocomplete="off"
             />
          </el-form-item>
-         <el-form-item label="手机号码" prop="Area">
+         <el-form-item label="手机号码" prop="telephone">
             <el-input
-            v-model="ruleForm.Area"
-            type="Area"
+            v-model="ruleForm.telephone"
+            type="telephone"
             autocomplete="off"
             />
          </el-form-item>
@@ -128,11 +135,11 @@
             autocomplete="off"
             />
          </el-form-item>
-         <el-form-item label="预约日期" prop="desc">
+         <el-form-item label="预约日期" prop="predata">
             <div class="block">
                 <el-date-picker
-                    v-model="ruleForm.desc"
-                    type="desc"
+                    v-model="ruleForm.predata"
+                    type="predata"
                     placeholder="请输入日期"
                 />
                 </div>
@@ -167,7 +174,8 @@
 </template>
 
 <script>
-    import { ElMessage } from 'element-plus';
+ 
+import { ElMessage } from 'element-plus';
     //import { split } from 'lodash';
     export default {
         name:'BuildMan',
@@ -178,60 +186,56 @@
                 pagesize:5,
                 drawer:false,
                 input2:'',
-                value:'全部',
+                value:'审核中',
                 // data:[],
                 options:[
                 {
-                    value: '全部',
-                    label: '全部'
+                    value: '审核中',
+                    label: '审核中'
                 },
                 {
-                    value: '普通住宅',
-                    label: '普通住宅',
+                    value: '审核通过',
+                    label: '审核通过',
                 },
                 {
-                    value: '商业用地',
-                    label: '商业用地',
-                },
-                {
-                    value: '商住两用',
-                    label: '商住两用',
-                },
+                    value: '审核未通过',
+                    label: '审核未通过',
+                }
             ],
             ruleForm:{
                houserepair:'',
                Equip:'',
-               Equipapp:'',
-               Area:'',
-               type:'',
-               people:'',
+               title:'',
                desc:'',
-               results:''
+               telephone:'',
+               people:'',
+               predata:'',
+               results:'',
             },
             rules: {
                 houserepair: [
-                  { required: true, message: '请输入维修设备', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
                Equip: [
-                  { required: true, message: '请输入设备名称', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
-               Equipapp: [
-                  { required: true, message: '请输入设备编写', trigger: 'blur' }
+               title: [
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
                Area: [
-                  { required: true, message: '请选择品牌型号', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
-               type: [
-                  { required: true, message: '请选择位置区域', trigger: 'blur' }
+               telephone: [
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
                people: [
-                  { required: true, message: '请选择维修人员', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
                desc: [
-                  { required: true, message: '请选择故障描述', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ],
                results: [
-                  { required: true, message: '请选择维修结果', trigger: 'blur' }
+                  { required: true, message: '请输入内容', trigger: 'blur' }
                ]
             },
             // tableData:[
@@ -271,23 +275,28 @@
             })
         },
     methods:{
+        //审核
+        handleAudit(){
+              this.$router.push('/man/Detail')
+            // window.location.href = '/manDetail'
+        },
         handleSelect(value){
             this.$store.dispatch('mainteMan/findList').then((res)=>{
-                if(res.data.filter((v)=>v.houseuse=== value || '全部' === value)){
-                    let tableData = res.data.filter((v)=>v.houseuse=== value || '全部' === value)
+                if(res.data.filter((v)=>v.status=== value || '审核中' === value)){
+                    let tableData = res.data.filter((v)=>v.status=== value || '审核中' === value)
                  this.$store.commit('mainteMan/getList',tableData)
                 }
            })
         },
         handleSizeChange(val){
            this.pagesize=val;
-           this.page=1
+        //    this.page=1
         },
         handleFind(){
             this.$store.dispatch('mainteMan/findList').then((res)=>{
                
-                if(res.data.filter((v)=>v.name.includes(this.input2))){
-                     let tableData = res.data.filter((v)=>v.name.includes(this.input2))
+                if(res.data.filter((v)=>v.predata.includes(this.predata))){
+                     let tableData = res.data.filter((v)=>v.predata.includes(this.predata))
                      this.$store.commit('mainteMan/getList',tableData)
                      ElMessage.success('查询成功')
 
@@ -304,7 +313,7 @@
             
         },
         handleReset(){
-            this.input2=''
+            this.input=''
         },
         handleEdit(index,row){
             this.drawer=true;
@@ -313,9 +322,8 @@
         handleDelete(index,row){
             
             this.$store.dispatch('mainteMan/removeList',row.id).then((res)=>{
-                    //   console.log("newList================",res.data);
                     if(res){
-                        this.$store.commit('mainteMan/deleteList',row.id)
+                        this.$store.commit('mainteMan/deleteList',index)
                         ElMessage.success('删除成功') 
                     }
                     
@@ -335,13 +343,10 @@
                if (!formEl) return
                formEl.validate((valid) => {
                if (valid) {
-                //    console.log(this.ruleForm)
                     this.$store.dispatch('mainteMan/addManage',this.ruleForm).then((res)=>{        
-                //   this.$store.dispatch('manage/findList')
-                //   console.log("findList----------------",this.$store.state.manage.list)     
                           this.$store.commit('mainteMan/addList',res.data)
-                          ElMessage.success('提交成功')
-                          this.dialogVisible=false;
+                          ElMessage.success('添加成功')
+                          this.drawer=false;
                    })
                } else {
                   console.log('error submit!')
@@ -353,11 +358,10 @@
                if (!formEl) return
                formEl.validate((valid) => {
                if (valid) {
-                // console.log(this.id);
                     this.$store.dispatch('mainteMan/updataList',{id:this.id,payload:this.ruleForm}).then((res)=>{
                     this.$store.commit('mainteMan/setList',res.data)
                     ElMessage.success('更新成功')
-                    this.dialogVisible=false;
+                    this.drawer=false;
                  })
                } else {
                   console.log('error submit!')
@@ -369,9 +373,6 @@
                 if (!formEl) return
                 formEl.resetFields()
          },
-        //  handleSelect(houseuse){
-        //     return this.ruleForm.houseuse=houseuse
-        //  }
     },
     computed:{
       tableData(){

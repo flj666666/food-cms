@@ -10,6 +10,8 @@ import ActiveMan from '@/views/activeMan.vue'
 import VisitMan from '@/views/visitMan.vue'
 import ComplaMan from '@/views/complaMan.vue'
 import MainteMan from '@/views/mainteMan.vue'
+import ManDetail from '@/views/manDetail.vue'
+
 import store from '@/store'
 
 const routes = [
@@ -61,6 +63,12 @@ const routes = [
         name: 'activeMan',
         component: ActiveMan,
         meta:{titles:['物业服务','活动管理']}
+      },
+      {
+        path: 'man/Detail',
+        name: 'manDetail',
+        component: ManDetail,
+        meta:{titles:['物业服务','维修管理','报修详情']}
       },
     ]
   },
