@@ -1,5 +1,4 @@
 {
-
   "message": [
     {
       "name": "11111",
@@ -65,8 +64,7 @@
       "value1": "2022-11-13T16:00:00.000Z",
       "id": 8
     }
-  ]
-    ,
+  ],
   "users": [
     {
       "email": "aaa@163.com",
@@ -77,97 +75,9 @@
       "email": "bbb@163.com",
       "password": "$2a$10$8Id5I/uPVnMSslk8YEGz8uDR3DMogyspdx08e/zEjQvysqd7s/B9S",
       "id": 2
-    },
-    {
-      "email": "cccc@163.com",
-      "password": "$2a$10$pPJQYEQnqnRBYlh/Ag3gL.U5XmRM7WVZW7QAlEyLi.RkX6ryKaOGu",
-      "id": 3
-    },
-    {
-      "email": "ddd@163.com",
-      "password": "$2a$10$/p7YsjedNNrj8gaF5zAUquu3vpUJOICViMku5oUlVS505JA.orYoq",
-      "id": 4
-    },
-    {
-      "email": "eee@163.com",
-      "password": "$2a$10$/E8ZMQR1u9zOULcwRAGLD.bg0GcgQixV6gNfBjdvzU1YS12YH4Orm",
-      "id": 5
-    },
-    {
-      "email": "ffff@163.com",
-      "password": "$2a$10$Mfsgy1b7JvORHBqXCIITc.sVybARWNmCcDEp.QtvUTCXfqLQgoPby",
-      "id": 6
-
     }
   ],
-  
-
-
-
   "manage": [
-    {
-      "name": "G座",
-      "houseuse": "商业用地",
-      "buildarea": "10000平方米",
-      "cellnum": "10000",
-      "housenum": "10000",
-      "datetime": "2022-11-05T16:00:00.000Z",
-      "id": 44
-    },
-    {
-      "name": "A座",
-      "houseuse": "商业用地",
-      "buildarea": "1234",
-      "cellnum": "1234",
-      "housenum": "1234",
-      "datetime": "2022-11-19T16:00:00.000Z",
-      "id": 46
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "101平方米",
-      "cellnum": "99",
-      "housenum": "99",
-      "datetime": "2022-11-12T16:00:00.000Z",
-      "id": 47
-    },
-    {
-      "name": "C座",
-      "houseuse": "普通住宅",
-      "buildarea": "100平方米",
-      "cellnum": "91",
-      "housenum": "19",
-      "datetime": "2022-11-13T02:03:33.000Z",
-      "id": 48
-    },
-    {
-      "name": "B座",
-      "houseuse": "普通住宅",
-      "buildarea": "101平方米",
-      "cellnum": "99",
-      "housenum": "99",
-      "datetime": "2022-11-12T16:00:00.000Z",
-      "id": 49
-    },
-    {
-      "name": "C座",
-      "houseuse": "普通住宅",
-      "buildarea": "100平方米",
-      "cellnum": "91",
-      "housenum": "19",
-      "datetime": "2022-11-13T02:03:33.000Z",
-      "id": 50
-    },
-    {
-      "name": "E座",
-      "houseuse": "普通住宅",
-      "buildarea": "101平方米",
-      "cellnum": "100",
-      "housenum": "9999",
-      "datetime": "2022-11-07T16:00:00.000Z",
-      "id": 51
-    },
     {
       "name": "A座",
       "houseuse": "普通住宅",
@@ -349,6 +259,19 @@
       "pushDate": "2021/11/11",
       "detail": "大家吃好喝好玩好",
       "id": 17
+    }
+  ],
+  "mainteMan": [
+    {
+      "houserepair": "A座",
+      "Equip": "电冰箱",
+      "Equipapp": "电冰箱没有冰",
+      "Area": "15012341234",
+      "type": "电冰箱没有冰，嗡嗡响",
+      "people": "六号楼，四单元",
+      "desc": "2022-11-09T16:00:00.000Z",
+      "results": "明天有空",
+      "id": 1
     }
   ]
 }

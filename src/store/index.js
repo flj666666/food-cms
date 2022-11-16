@@ -1,8 +1,11 @@
 import { createStore } from 'vuex'
-import cellInfo from './modules/cellInfo'
-
-import users from "@/store/modules/users";
+import cellInfo from './models/cellInfo'
+import manage from '@/store/models/manage'
+import activeManage from '@/store/models/activeManage'
+import users from "@/store/models/users";
 import VuexPersistence from 'vuex-persist'
+import mainteMan from './models/mainteMan';
+
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
   reducer: (state) => {
@@ -15,13 +18,8 @@ const vuexLocal = new VuexPersistence({
 })
 
 
-
-
 // import users from '@/store/models/users'
 
-import message from '@/store/models/message'
-import manage from '@/store/models/manage'
-import activeManage from '@/store/models/activeManage'
 
 
 export default createStore({
@@ -36,9 +34,9 @@ export default createStore({
   modules: {
     cellInfo,
     users,
-    message,
     manage,
-    activeManage    
+    activeManage,
+    mainteMan    
   },
   plugins: [vuexLocal.plugin]
   }

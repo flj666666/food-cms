@@ -10,7 +10,7 @@ import ActiveMan from '@/views/activeMan.vue'
 import VisitMan from '@/views/visitMan.vue'
 import ComplaMan from '@/views/complaMan.vue'
 import MainteMan from '@/views/mainteMan.vue'
-
+import store from '@/store'
 
 const routes = [
   {
@@ -78,21 +78,27 @@ const router = createRouter({
   routes
 })
 
-// router.beforeEach((to, from, next)=>{
-//   if( to.matched[0].meta.auth ){ 
-//     store.dispatch('users/info').then((res)=>{
-//       console.log(res.data)   
-//       // if(res.data){
-//       //   // store.commit('users/updateUsername', res.data.email)
-//       //   // next()
-//       // }
-//       // else{   
-//       //   next('/login')
-//       // }
-//     })
+router.beforeEach((to, from, next)=>{
 
-//   }
+  //console.log( to.matched[0].meta  );  //找当前路由对应的一级meta值
 
-// })
+  if( to.matched[0].meta.auth && !store.state.users.token ){ //需要权限
+    store.dispatch('users/info').then((res)=>{
+      if(res.data.token){   // 有权限
+        store.commit('users/updateUsername', res.data.token)
+        next()
+      }
+      else{   // 没权限或伪造的token
+        next('/login')
+      }
+    })
+
+  }
+  else{  
+    next()
+  }
+
+   })
+
 
 export default router
