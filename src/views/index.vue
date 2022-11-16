@@ -58,16 +58,16 @@
                 <Apple />
               </el-icon>维修管理
             </el-menu-item>
-            <el-menu-item index="/visit/Man">
+            <!-- <el-menu-item index="/visit/Man">
               <el-icon>
                 <Apple />
               </el-icon>访客管理
-            </el-menu-item>
-            <el-menu-item index="/compla/Man">
+            </el-menu-item> -->
+            <!-- <el-menu-item index="/compla/Man">
               <el-icon>
                 <Apple />
               </el-icon>投诉管理
-            </el-menu-item>
+            </el-menu-item> -->
             <el-menu-item index="/active/Man">
               <el-icon>
                 <Apple />
