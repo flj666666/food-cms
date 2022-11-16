@@ -98,17 +98,12 @@ router.beforeEach((to, from, next)=>{
 
   //console.log( to.matched[0].meta  );  //找当前路由对应的一级meta值
 
-  if( to.matched[0].meta.auth && !store.state.users.token ){ //需要权限
-    store.dispatch('users/info').then((res)=>{
-      if(res.data.token){   // 有权限
-        store.commit('users/updateUsername', res.data.token)
-        next()
-      }
-      else{   // 没权限或伪造的token
-        next('/login')
-      }
-    })
-
+  if (to.matched[0].meta.auth && !store.state.users.token) { //需要权限
+    if (store.state.users.temporaryToken) {
+      next()
+    } else {
+      next('/login')
+    }
   }
   else{  
     next()

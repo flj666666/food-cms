@@ -1,12 +1,8 @@
 <template>
   <div class="all">
-    <el-form ref="ruleFormRef" 
-    :model="ruleForm" 
-    status-icon 
-    :rules="rules" 
-    label-width="60px">
-      
-     <el-form-item prop="email">
+    <el-form ref="ruleFormRef" :model="ruleForm" status-icon :rules="rules" label-width="60px">
+
+      <el-form-item prop="email">
         <el-input v-model.email.trim="ruleForm.email" type="text" autocomplete="off" placeholder="用户名" clearable
           prefix-icon="User">
         </el-input>
@@ -41,7 +37,7 @@ export default {
         email: '',
         password: '',
       },
-      isRemember: false,//默认不记住密码
+      isRemember: true,//默认记住密码
       rules: {
         email: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
@@ -61,11 +57,15 @@ export default {
       if (!formEl) return
       formEl.validate((valid) => {
         if (valid) {
-            // this.$store.commit('users/addRemove',this.isRemember)
-            this.$store.dispatch('users/login', this.ruleForm).then((res) => {
-            this.$store.commit('users/updateToken', res.data.accessToken)
+          // this.$store.commit('users/addRemove',this.isRemember)
+          this.$store.dispatch('users/login', this.ruleForm).then((res) => {
+            if (this.isRemember) {
+              this.$store.commit('users/updateToken', res.data.accessToken)
+            } else{
+              this.$store.commit('users/temporary', res.data.accessToken)
+            }
             ElMessage.success('登录成功')
-            this.$router.push('/')         
+            this.$router.push('/')
           }).catch(() => {
             ElMessage.error('登录失败')
           })
@@ -75,7 +75,7 @@ export default {
         }
       })
     },
-    registerForm(){
+    registerForm() {
       this.$router.push('/register')
     }
 

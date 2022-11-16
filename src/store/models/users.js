@@ -1,41 +1,44 @@
 import http from "@/utils/http";
 
 const state = {
-    token:'',
-    
+  token: '',
+  temporaryToken: ''
 };
 const getters = {};
 const actions = {
 
- login(context, payload){
-      return http.post('/login', payload)
+  login(context, payload) {
+    return http.post('/login', payload)
   },
-    info(){
-   return http.get('/users')
+  info() {
+    return http.get('/users')
   },
-  register(context,payload){
-    return http.post('/register',payload)
+  register(context, payload) {
+    return http.post('/register', payload)
   }
 };
 const mutations = {
-   
-   updateToken(state,payload){
-     state.token = payload;
+
+  temporary(state,payload) {
+    state.temporaryToken = payload;
   },
-    updateUsername(state,payload){
+  updateToken(state, payload) {
+    state.token = payload;
+  },
+  updateUsername(state, payload) {
     state.username = payload;
-    },
-     clearToken(state){
-      state.token=''
-   }
+  },
+  clearToken(state) {
+    state.token = ''
+  }
 
 };
 
 
 export default {
-    namespaced: true,
-    state,
-    getters,
-    actions,
-    mutations
+  namespaced: true,
+  state,
+  getters,
+  actions,
+  mutations
 }
