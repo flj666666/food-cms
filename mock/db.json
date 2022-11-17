@@ -63,6 +63,22 @@
       },
       "value1": "2022-11-13T16:00:00.000Z",
       "id": 8
+    },
+    {
+      "name": "dswadf",
+      "number": "asdfg",
+      "region": "asdfgh",
+      "detailed": "qASWDF",
+      "small": "WSDF",
+      "introduction": "AWSERT",
+      "names": "WSDFFF",
+      "wechat": "WSDF",
+      "telphone": "15012341234",
+      "file": {
+        "uid": 1668646651350
+      },
+      "value1": "2022-11-06T16:00:00.000Z",
+      "id": 9
     }
   ],
   "users": [
@@ -90,16 +106,31 @@
       "email": "fff@163.com",
       "password": "$2a$10$jKaAcH/U4Ug0ymGxKNczEubr90gWEfzlqZyyeE3FGcZ/K.TE7Th4u",
       "id": 5
+    },
+    {
+      "email": "ddd@163.com",
+      "password": "$2a$10$BeZ/JOYoC3oGg8X3MoLJwu6QJJVGaQm7krf9Rr.QcseeWLg0mIIcy",
+      "id": 6
+    },
+    {
+      "email": "cbb@163.com",
+      "password": "$2a$10$ANLP9NiI26UbN06ml2PA/uPaVOmndWP5OHDUW8qged8ybJZusSlD.",
+      "id": 7
+    },
+    {
+      "email": "1234@163.com",
+      "password": "$2a$10$DUyO7TGA1g.4U90rmqiIvuDsuzGGiwOn/xco0dNB2OywFRTyCh14y",
+      "id": 8
     }
   ],
   "manage": [
     {
-      "name": "D座",
+      "name": "b",
       "houseuse": "普通住宅",
-      "buildarea": "110平方米",
-      "cellnum": "61",
-      "housenum": "16",
-      "datetime": "2022-11-13T16:00:00.000Z",
+      "buildarea": "ASD",
+      "cellnum": "4",
+      "housenum": "5",
+      "datetime": "2022-11-05T16:00:00.000Z",
       "id": 1
     },
     {
